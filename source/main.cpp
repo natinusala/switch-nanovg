@@ -221,14 +221,13 @@ static double getTimeSec()
     return getTimeUsec() / 1000000.0;
 }
 
+static int blowup = 0; //press - to trigger blowup effect
+static double mx = 0; //mouse X (hooked to touchscreen)
+static double my = 0; //mouse Y (hooked to touchscreen)
+
 //TODO: Add graphs ?
 static void sceneRender()
 {
-    //TODO: Hook those to touchscreen / JoyCons
-    double mx = 0; //mouse X
-    double my = 0; //mouse Y
-    int blowup = 0; //blowup effect
-
     glViewport(0, 0, winWidth, winHeight);
 
     glClearColor(0,0,0,0);
@@ -276,6 +275,18 @@ int main(int argc, char* argv[])
         u32 kDown = hidKeysDown(CONTROLLER_P1_AUTO);
         if (kDown & KEY_PLUS)
             break;
+
+        if (kDown & KEY_MINUS)
+            blowup = !blowup;
+
+        touchPosition touch;
+
+        if (hidTouchCount() > 0)
+        {
+            hidTouchRead(&touch, 0);
+            mx = (double)touch.px;
+            my = (double)touch.py;
+        }
 
         // Render stuff!
         sceneRender();
