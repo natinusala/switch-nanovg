@@ -32,9 +32,9 @@ include $(DEVKITPRO)/libnx/switch_rules
 #---------------------------------------------------------------------------------
 TARGET		:=	nanovg
 BUILD		:=	build
-SOURCES		:=	source source/nanovg
+SOURCES		:=	source source/demo libs/nanovg/src
 DATA		:=	data
-INCLUDES	:=	include
+INCLUDES	:=	libs/nanovg/src
 EXEFS_SRC	:=	exefs_src
 ROMFS		:=	romfs
 

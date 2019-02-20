@@ -8,9 +8,9 @@
 #include <EGL/egl.h>    // EGL library
 #include <EGL/eglext.h> // EGL extensions
 #include <glad/glad.h>
-#include "nanovg/nanovg.h"
+#include <nanovg.h>
 #define STB_IMAGE_WRITE_IMPLEMENTATION
-#include "nanovg/stb_image_write.h"
+#include "stb_image_write.h"
 
 
 #ifdef _MSC_VER

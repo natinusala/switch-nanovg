@@ -7,11 +7,11 @@
 #include <EGL/eglext.h> // EGL extensions
 #include <glad/glad.h>  // glad library (OpenGL loader)
 
-#include "nanovg/nanovg.h"
+#include <nanovg.h>
 #define NANOVG_GL3_IMPLEMENTATION
-#include "nanovg/nanovg_gl.h"
+#include <nanovg_gl.h>
 
-#include "demo.h"
+#include "demo/demo.h"
 
 //-----------------------------------------------------------------------------
 // nxlink support
