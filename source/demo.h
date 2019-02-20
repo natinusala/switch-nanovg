@@ -1,7 +1,7 @@
 #ifndef DEMO_H
 #define DEMO_H
 
-#include "nanovg.h"
+#include "nanovg/nanovg.h"
 
 #ifdef __cplusplus
 extern "C" {
