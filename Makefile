@@ -30,7 +30,7 @@ include $(DEVKITPRO)/libnx/switch_rules
 #     - icon.jpg
 #     - <libnx folder>/default_icon.jpg
 #---------------------------------------------------------------------------------
-TARGET		:=	nanovg
+TARGET		:=	switch-nanovg
 BUILD		:=	build
 SOURCES		:=	source source/demo libs/nanovg/src
 DATA		:=	data
